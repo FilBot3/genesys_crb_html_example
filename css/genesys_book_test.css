@@ -109,3 +109,20 @@ p text.table-header {
   font-weight: bold;
   font-family: "BebasNeueBold";
 }
+
+/**
+ */
+@media print {
+  body {
+    /** Paper Sizes
+     * @see https://www.papersizes.org/a-paper-sizes.htm
+     * A6 Paper
+     */
+    width: 105mm;
+    height: 148mm;
+  }
+
+  h1 {
+    page-break-before: always;
+  }
+}
