@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "BebasNeueBold";
+  src: url("file:///home/filbot/.local/share/fonts/Genesys_Fonts/BebasNeue Bold.otf");
+}
+
+@font-face {
+  font-family: "BebasNeueRegular";
+  src: url("file:///home/filbot/.local/share/fonts/Genesys_Fonts/BebasNeue Regular.otf");
+}
+
+@font-face {
+  font-family: "MinionProRegular";
+  src: url("file:///home/filbot/.local/share/fonts/Genesys_Fonts/MinionPro-Regular.otf");
+}
+
+body {
+  font-size: 10px;
+  background-color: rgb(204, 255, 255);
+  background-image: url("file:///home/filbot/Documents/Development/pandoc/genesys_html_template/images/Genesys Background.png");
+  font-family: "MinionProRegular");
+}
+
+nav ul li {
+    font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(0, 192, 243); /* Light Blue */
+  font-size: 30px;
+  text-decoration: underline;
+  font-family: "BebasNeueRegular";
+}
+
+h2 {
+  color: rgb(46, 110, 165); /* Blue */
+  font-size: 16px;
+  font-family: "BebasNeueRegular";
+}
+
+h3 {
+  color: rgb(46, 110, 165); /* Blue */
+  font-size: 14px;
+  font-family: "BebasNeueRegular";
+}
+
+h4 {
+  color: rgb(243, 108, 32); /* Orange */
+  font-size: 13px;
+  text-decoration: underline;
+  font-family: "BebasNeueRegular";
+}
+
+h5 {
+  color: rgb(243, 108, 32); /* Orange */
+  font-size: 12px;
+  font-family: "BebasNeueRegular";
+}
+
+h6 {
+  color: rgb(46, 110, 165); /* Blue */
+  font-size: 10px;
+  font-family: "BebasNeueRegular";
+}
+
+/* This is supposed to be the call-outs and such
+ * I may make this into it's own custom tag for callouts so that they can be
+ * different colors.
+ */
+blockquote {
+  color: rgb(255, 255, 255);
+  background-color: rgb(83, 44, 127);
+}
+
+/* This creates a border around the table and its cells. */
+table, th, td {
+  border: 1px solid  rgb(0, 0, 0);
+}
+
+/* This collapses the table borders so they only show once. */
+table {
+  border-collapse: collapse;
+}
+
+/* Table Header */
+thead {
+  color: rgb(255, 255, 255);
+  background-color: rgb(243, 108, 32);
+  font-size: 12px;
+}
+
+/* Table rows that are even */
+tbody tr.even {
+  background-color: rgb(226, 237, 241);
+}
+
+/* Table cell data */
+tbody tr td {
+  font-size: 8px;
+  font-family: "MinionProRegular";
+}
+
+/* A custom html tag.
+ * <text class="table-header"></text>
+ */
+p text.table-header {
+  color: rgb(46, 110, 165);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "BebasNeueBold";
+}
