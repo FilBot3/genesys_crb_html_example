@@ -87,6 +87,7 @@ thead {
   color: rgb(255, 255, 255);
   background-color: rgb(243, 108, 32);
   font-size: 12px;
+  font-family: "BebasNeueRegular";
 }
 
 /* Table rows that are even */
