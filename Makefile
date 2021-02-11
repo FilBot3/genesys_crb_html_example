@@ -45,4 +45,8 @@ weasyprint:
 	# **PREFERED**
 	# https://weasyprint.org/
 	# https://weasyprint.readthedocs.io
-	bash scripts/weasyprint.sh
+	weasyprint \
+		html/genesys_book_test.html \
+		pdf/genesys_book_weasyprint_test.pdf \
+		--format pdf \
+		--stylesheet css/weasyprint.css
