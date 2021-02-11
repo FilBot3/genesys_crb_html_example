@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "BebasNeueBook";
+  src: url("file:///home/filbot/.local/share/fonts/Genesys_Fonts/BebasNeue Book.otf");
+}
+
+@font-face {
   font-family: "BebasNeueBold";
   src: url("file:///home/filbot/.local/share/fonts/Genesys_Fonts/BebasNeue Bold.otf");
 }
@@ -17,7 +22,7 @@ body {
   font-size: 10px;
   background-color: rgb(204, 255, 255);
   background-image: url("file:///home/filbot/Documents/Development/pandoc/genesys_html_template/images/Genesys Background A6.png");
-  font-family: "MinionProRegular");
+  font-family: "MinionProRegular";
 }
 
 nav ul li {
@@ -29,13 +34,13 @@ h1 {
   color: rgb(0, 192, 243); /* Light Blue */
   font-size: 30px;
   text-decoration: underline;
-  font-family: "BebasNeueRegular";
+  font-family: "BebasNeueBold";
 }
 
 h2 {
   color: rgb(46, 110, 165); /* Blue */
   font-size: 16px;
-  font-family: "BebasNeueRegular";
+  font-family: "BebasNeueBold";
 }
 
 h3 {
@@ -63,6 +68,10 @@ h6 {
   font-family: "BebasNeueRegular";
 }
 
+p {
+  text-indent: 30px;
+}
+
 /* This is supposed to be the call-outs and such
  * I may make this into it's own custom tag for callouts so that they can be
  * different colors.
@@ -70,6 +79,10 @@ h6 {
 blockquote {
   color: rgb(255, 255, 255);
   background-color: rgb(83, 44, 127);
+}
+
+blockquote p {
+  text-indent: 10px;
 }
 
 /* This creates a border around the table and its cells. */
@@ -87,7 +100,7 @@ thead {
   color: rgb(255, 255, 255);
   background-color: rgb(243, 108, 32);
   font-size: 12px;
-  font-family: "BebasNeueRegular";
+  font-family: "BebasNeueBook";
 }
 
 /* Table rows that are even */
@@ -107,8 +120,8 @@ tbody tr td {
 p text.table-header {
   color: rgb(46, 110, 165);
   font-size: 15px;
-  font-weight: bold;
   font-family: "BebasNeueBold";
+  text-indent: 0;
 }
 
 /**

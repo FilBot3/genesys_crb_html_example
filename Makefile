@@ -9,7 +9,8 @@ html:
 		--output=html/genesys_book_test.html \
 		content/genesys_book_test.md
 
-pdf: html
+wkhtmltopdf: html
+	# https://wkhtmltopdf.org/
 	wkhtmltopdf \
 		--margin-top 0 \
 		--margin-bottom 0 \
@@ -26,9 +27,26 @@ pdf: html
 		--print-media-type \
 		--enable-toc-back-links \
 		--encoding UTF-8 \
-		--footer-center "[title]" \
-		cover html/cover_page.html \
-		page \
+		--footer-html html/footer.html \
+		html/cover_page.html \
 		html/genesys_book_test.html \
 		pdf/genesys_book_test.pdf
 
+prince: html
+	# https://www.princexml.com
+	prince \
+		html/genesys_book_test.html \
+		--output=pdf/genesys_book_test.pdf \
+		--media=print \
+		--page-size=A6 \
+		--page-margin=1mm
+
+weasyprint:
+	# **PREFERED**
+	# https://weasyprint.org/
+	# https://weasyprint.readthedocs.io
+	weasyprint \
+		html/genesys_book_test.html \
+		pdf/genesys_book_test.pdf \
+		--format pdf \
+		--stylesheet <(echo '@page { size: 105mm 148mm; margin: 1mm; }')
