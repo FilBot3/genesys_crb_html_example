@@ -30,13 +30,13 @@ wkhtmltopdf: html
 		--footer-html html/footer.html \
 		html/cover_page.html \
 		html/genesys_book_test.html \
-		pdf/genesys_book_test.pdf
+		pdf/genesys_book_wkhtmltopdf_test.pdf
 
 prince: html
 	# https://www.princexml.com
 	prince \
 		html/genesys_book_test.html \
-		--output=pdf/genesys_book_test.pdf \
+		--output=pdf/genesys_book_prince_test.pdf \
 		--media=print \
 		--page-size=A6 \
 		--page-margin=1mm
@@ -45,8 +45,4 @@ weasyprint:
 	# **PREFERED**
 	# https://weasyprint.org/
 	# https://weasyprint.readthedocs.io
-	weasyprint \
-		html/genesys_book_test.html \
-		pdf/genesys_book_test.pdf \
-		--format pdf \
-		--stylesheet <(echo '@page { size: 105mm 148mm; margin: 1mm; }')
+	bash scripts/weasyprint.sh
